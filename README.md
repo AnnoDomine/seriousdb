@@ -16,13 +16,13 @@ uv sync
 uv run run.py
 ```
 
-The server is available at `http://0.0.0.0:8000`.
+The server is available at `http://127.0.0.1:8000`.
 
 Interactive API documentation is available at:
 
-- [Swagger UI](http://0.0.0.0:8000/docs)
-- [ReDoc](http://0.0.0.0:8000/redoc)
-- [OpenAPI schema](http://0.0.0.0:8000/openapi.json)
+- [Swagger UI](http://127.0.0.1:8000/docs)
+- [ReDoc](http://127.0.0.1:8000/redoc)
+- [OpenAPI schema](http://127.0.0.1:8000/openapi.json)
 
 ## Documentation
 
