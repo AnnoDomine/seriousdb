@@ -17,6 +17,7 @@ uv run run.py
 ```
 
 The server is available at `http://127.0.0.1:8000`.
+> To change the default IP and PORT, define the environment variables `APP_HOST` and `APP_PORT` to your preferred values.
 
 Interactive API documentation is available at:
 
