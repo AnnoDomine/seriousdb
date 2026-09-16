@@ -16,6 +16,7 @@ uv run run.py
 ```
 
 The server is available at `http://127.0.0.1:8000`.
+
 > To change the default IP and PORT, define the environment variables `APP_HOST` and `APP_PORT` to your preferred values.
 
 Interactive API documentation is available at:
@@ -35,10 +36,12 @@ cp .env.example .env
 
 The `.env` file is gitignored and should never be committed.
 
-| Variable              | Default | Description                              |
-|-----------------------|---------|------------------------------------------|
-| `SERIOUSDB_DB_FILE`   | `.sdb`  | Path to the on-disk database file.       |
-| `SERIOUSDB_LOG_LEVEL` | `INFO`  | Logging level (DEBUG/INFO/WARNING/ERROR/CRITICAL). |
+| Variable              | Default     | Description                                        |
+| --------------------- | ----------- | -------------------------------------------------- |
+| `SERIOUSDB_DB_FILE`   | `.sdb`      | Path to the on-disk database file.                 |
+| `SERIOUSDB_LOG_LEVEL` | `INFO`      | Logging level (DEBUG/INFO/WARNING/ERROR/CRITICAL). |
+| `SERIOUSDB_HOST`      | `127.0.0.1` | Host IP where the API is running.                  |
+| `SERIOUSDB_PORT`      | `8000`      | Host port which is used by the API.                |
 
 ## Documentation
 
