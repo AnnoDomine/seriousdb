@@ -1,4 +1,5 @@
 import logging
+from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 from typing import Annotated
 
@@ -12,7 +13,7 @@ cache = Cache()
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     logging.basicConfig(level=LOG_LEVEL.upper())
     cache.load(DB_FILE)
     yield
@@ -59,7 +60,7 @@ def delete(
     key: str,
     background_tasks: BackgroundTasks,
     cache: Annotated[Cache, Depends(get_cache)],
-):
+) -> str:
     value = cache.delete(key)
     background_tasks.add_task(cache.flush)
     return value

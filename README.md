@@ -25,8 +25,8 @@ Interactive API documentation is available at:
 
 ## Configuration
 
-Server configuration is read from environment variables. Copy the example
-file and adjust for local development:
+Server configuration is optional and can be customized from environment variables.
+Copy the example file and adjust for local development:
 
 ```bash
 cp .env.example .env
@@ -47,6 +47,7 @@ The `.env` file is gitignored and should never be committed.
 - [Persistence](docs/persistence.md)
 - [Contributing](docs/contributing.md)
 - [Testing](docs/testing.md)
+- [Project configuration](docs/environment_variables.md)
 
 ## License
 
