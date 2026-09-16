@@ -31,6 +31,7 @@ Interactive API documentation is available at:
 - [Persistence](docs/persistence.md)
 - [Contributing](docs/contributing.md)
 - [Testing](docs/testing.md)
+- [Project configuration](docs/environment_variables.md)
 
 ## License
 
