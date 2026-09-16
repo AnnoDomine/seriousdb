@@ -26,7 +26,7 @@ def test_put_stores_value(client):
         params={"key": "test_key", "value": "test_value"},
     )
 
-    assert response.status_code == 200
+    assert response.status_code == 201
     assert response.json() == "test_value"
 
 
@@ -118,10 +118,12 @@ def test_delete_missing_key_parameter_returns_422(client):
 
 
 def test_put_updates_existing_key(client):
-    client.put(
+    response = client.put(
         "/db",
         params={"key": "name", "value": "Alice"},
     )
+    assert response.status_code == 201
+    assert response.json() == "Alice"
 
     response = client.put(
         "/db",
@@ -154,7 +156,7 @@ def test_concurrent_put_requests(client):
     with ThreadPoolExecutor(max_workers=10) as executor:
         responses = list(executor.map(put_value, range(10)))
 
-    assert all(response.status_code == 200 for response in responses)
+    assert all(response.status_code == 201 for response in responses)
 
     response = client.get("/db/all")
 
@@ -199,7 +201,7 @@ def test_concurrent_put_and_delete_requests(client):
         put_responses = [future.result() for future in put_futures]
 
     assert all(response.status_code == 200 for response in delete_responses)
-    assert all(response.status_code == 200 for response in put_responses)
+    assert all(response.status_code == 201 for response in put_responses)
 
     response = client.get("/db/all")
 
