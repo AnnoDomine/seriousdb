@@ -25,8 +25,8 @@ Interactive API documentation is available at:
 
 ## Configuration
 
-Server configuration is read from environment variables. Copy the example
-file and adjust for local development:
+Server configuration is optional and can be customized from environment variables.
+Copy the example file and adjust for local development:
 
 ```bash
 cp .env.example .env
