@@ -25,9 +25,11 @@ SERIOUSDB_EXAMPLE_KEY=EXAMPLE_VALUE # Right. Includes prefix and description
 
 `config.py`
 ```python
-EXAMPLE_KEY = os.getenv("SERIOUSDB_EXAMPLE_KEY") # Wrong. Missing default value
+EXAMPLE_KEY = os.getenv("SERIOUSDB_EXAMPLE_KEY")  # Wrong. Missing default value
 
-EXAMPLE_KEY = os.getenv("SERIOUSDB_EXAMPLE_KEY", "example default value") # Right. Has a default value
+EXAMPLE_KEY = os.getenv(
+    "SERIOUSDB_EXAMPLE_KEY", "example default value"
+)  # Right. Has a default value
 ```
 
 ### How to use environment variables in code
@@ -35,12 +37,15 @@ EXAMPLE_KEY = os.getenv("SERIOUSDB_EXAMPLE_KEY", "example default value") # Righ
 As mentioned above, environment variables must always be read inside `config.py`. From there, they can be imported app-wide.
 
 ```python
-example = os.getenv("SERIOUSDB_EXAMPLE_KEY", "example default value") # Wrong. Must be accessed in config.py
+example = os.getenv(
+    "SERIOUSDB_EXAMPLE_KEY", "example default value"
+)  # Wrong. Must be accessed in config.py
 
 # ---
 
 from .config import EXAMPLE_KEY
-example=EXAMPLE_KEY # Right. Imported from config-py
+
+example = EXAMPLE_KEY  # Right. Imported from config-py
 ```
 
 ## Configuring environment variables (for Users)
