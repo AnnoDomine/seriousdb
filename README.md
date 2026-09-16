@@ -47,7 +47,7 @@ The `.env` file is gitignored and should never be committed.
 - [Persistence](docs/persistence.md)
 - [Contributing](docs/contributing.md)
 - [Testing](docs/testing.md)
-- [Project configuration](docs/environment_variables.md)
+- [Project configuration](docs/configuration.md)
 
 ## License
 
