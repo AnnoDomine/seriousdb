@@ -1,4 +1,4 @@
-"""Start the development server with auto-reload on port the provided port (default: 8000)."""
+"""Start the development server with auto-reload on the provided port (default: 8000)."""
 
 import uvicorn
 
