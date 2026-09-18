@@ -19,7 +19,7 @@ PRs that skip this process may be closed without review.
 - Follow the [docstring conventions](development.md#docstrings).
 - If you add or change an endpoint, update [the API reference](api.md) and verify the behavior via the FastAPI docs at `/docs` or an HTTP client.
 
-Commits are alway run pre-commit to enforce `uv lock`, `type check` ,`pytest` , `linting`, `formating` and `conventional commit`
+Commits are always run pre-commit to enforce `uv lock`, `type check` ,`pytest` , `linting`, `formatting` and `conventional commit`
 
 ---
 
